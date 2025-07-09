@@ -52,7 +52,7 @@ form.addEventListener("submit", async function (e) {
   const college = document.getElementById("college").value.trim();
   const screenshot = document.getElementById("screenshot").files[0];
 
-  if (!name || !phone || !email || !college || !screenshot) {
+  if (!timestamp||!name || !phone || !email || !college || !screenshot) {
     alert("Please fill out all fields and upload a screenshot.");
     return;
   }
@@ -75,7 +75,7 @@ form.addEventListener("submit", async function (e) {
   };
 
   try {
-    const response = await fetch("https://script.google.com/macros/s/AKfycbwiPuge5QEaBNlST_45SA5e7vac0OCajz-6sRLDgJ-qfeBNtc1CGlyxV4His4T556moug/exec", {
+    const response = await fetch("https://script.google.com/macros/s/AKfycbzPcQZHprfX1O31dnhjpUpFFXbKec5f57xinuvMICNJl0Mk7yAfAfytsFCy5RaO03Y_WQ/exec", {
       method: "POST",
       body: JSON.stringify(data),
       headers: {
